@@ -1,0 +1,21 @@
+The way my program works is as such:
+
+first I open the map file and store the first char into a circular linked list. I read through the characters, adding them to my list with addEnd until I hit a space. I convert this CLL to a string and have it store said string to the dictionary name. I do the same to get the data file name.
+
+After I have the file names, I use readDict to open the dict file, and read the file char by char while checking that it is a character or not. Everytime I find a non alpha char, I store the linked list into a string, this is my word.
+
+I then insert the word into the trie (root)
+
+once Im done inserting all the words I open the data file
+
+for every alpha word in the dict file, I run an incrementing search which does superword++ whenever a search passes over that letter in the trie and occurance++, super -- whenever a search succesfully ends on a letter.
+
+Then I read the dict file again, output the words into a linked list. Using buildAnswer
+
+the words cary over the super and occ values from the last letter they had when they were in the trie.
+I do quick sort on this answer list
+Then I write the answer list with the values into the designated file with printResult();
+
+I do this for every set of files until the end of the mapping file;
+
+
